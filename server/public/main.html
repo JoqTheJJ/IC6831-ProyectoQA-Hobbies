@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Hobbies</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap para proporcionar estilos predeterminados -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos personalizada para la página de hobbies -->
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Contenedor principal que agrupa el menú lateral y el contenido de la página -->
+<div class="hobbies-container">
+    <div class="menu">
+        <h2>Hobbies</h2>
+        <!-- Botones para navegar entre las secciones de likes, dislikes y cerrar sesión -->
+        <button onclick="location.href='likeswindow.html'">Mis Likes</button>
+        <button onclick="location.href='dislikeswindow.html'">Mis Dislikes</button>
+        <button onclick="location.href='login.html'">Cerrar Sesión</button>
+    </div>
+
+    <!-- Sección principal donde se mostrará el contenido de los hobbies y recomendaciones -->
+    <div class="content">
+        <!-- Bloque para explorar hobbies disponibles -->
+        <div>
+            <h3>Explora Hobbies</h3>
+            <div class="hobby-list">
+            </div>
+        </div>
+        
+        <!-- Bloque para mostrar las recomendaciones basadas en los hobbies de otros usuarios -->
+        <div>
+            <h4>Te recomendamos:</h4>
+            <div class="recommendations">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Enlace al archivo JavaScript que contiene la lógica de interacción con la página -->
+<script src="main.js"></script>
+</body>
+</html>

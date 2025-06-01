@@ -1,0 +1,87 @@
+/* Estilo general del cuerpo */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+/* Contenedor principal del formulario de registro */
+.register-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Sección de información en el lado izquierdo */
+.register-info {
+  background: linear-gradient(55deg, rgba(79,183,131,1) 14.4%, rgba(254,235,151,1) 92.7%);
+  color: white;
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Estilo del título y texto de la sección de información */
+.register-info h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.register-info p {
+  font-size: 16px;
+}
+
+.register-info a {
+  background-color: white;
+  color: rgb(25, 159, 92);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sección del formulario de registro */
+.register-form {
+  background-color: white;
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Estilo del título del formulario */
+.register-form h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Estilo de los campos del formulario */
+.register-form .form-control {
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 80%;
+}
+
+/* Estilo del botón de enviar */
+.register-form .btn {
+  border-radius: 50px;
+  background-color: rgba(79,183,131,1);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 15px;
+  width: 80%;
+  margin: 0 auto;
+}

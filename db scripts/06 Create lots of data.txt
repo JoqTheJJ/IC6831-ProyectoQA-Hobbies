@@ -1,0 +1,257 @@
+// Crear 20 nuevos hobbies
+CREATE (h11:Hobby {nombre: 'Escalar'}),
+       (h12:Hobby {nombre: 'Pescar'}),
+       (h13:Hobby {nombre: 'Esquí'}),
+       (h14:Hobby {nombre: 'Programación'}),
+       (h15:Hobby {nombre: 'Meditación'}),
+       (h16:Hobby {nombre: 'Yoga'}),
+       (h17:Hobby {nombre: 'Senderismo'}),
+       (h18:Hobby {nombre: 'Surf'}),
+       (h19:Hobby {nombre: 'Buceo'}),
+       (h20:Hobby {nombre: 'Tocar la guitarra'}),
+       (h21:Hobby {nombre: 'Astronomía'}),
+       (h22:Hobby {nombre: 'Escultura'}),
+       (h23:Hobby {nombre: 'Cine'}),
+       (h24:Hobby {nombre: 'Teatro'}),
+       (h25:Hobby {nombre: 'Baile'}),
+       (h26:Hobby {nombre: 'Patinaje'}),
+       (h27:Hobby {nombre: 'Natación'}),
+       (h28:Hobby {nombre: 'Caligrafía'}),
+       (h29:Hobby {nombre: 'Poesía'}),
+       (h30:Hobby {nombre: 'Diseño gráfico'});
+
+// Crear 10 nuevos usuarios
+CREATE (u11:Usuario {correo: 'mariana.fernandez@gmail.com', username: 'marianafern', password: 'mariana!fern456'}),
+       (u12:Usuario {correo: 'andres.romero@outlook.com', username: 'andresrom', password: 'andresROM990'}),
+       (u13:Usuario {correo: 'lucia.castro@hotmail.com', username: 'luciacastro', password: 'luciaCpass22'}),
+       (u14:Usuario {correo: 'juan.garcia@yahoo.com', username: 'juangarcia', password: 'juanGarcia*45'}),
+       (u15:Usuario {correo: 'emilia.rodriguez@gmail.com', username: 'emiliaro', password: 'emirod567'}),
+       (u16:Usuario {correo: 'javier.mendez@outlook.com', username: 'javiermen', password: 'javmend989'}),
+       (u17:Usuario {correo: 'maria.gutierrez@hotmail.com', username: 'mariagut', password: 'mariaGut123'}),
+       (u18:Usuario {correo: 'jorge.ramirez@gmail.com', username: 'jorgeram', password: 'jorgeramz789'}),
+       (u19:Usuario {correo: 'valentina.ortega@yahoo.com', username: 'valortega', password: 'valenOrt!*456'}),
+       (u20:Usuario {correo: 'diego.rivas@hotmail.com', username: 'diegoriv', password: 'diegoriv999'}),
+	(u21:Usuario {correo: 'isaac17@gmail.com', username: 'isaac17', password: '12345'}),
+       (u22:Usuario {correo: 'josue27@gmail.com', username: 'josue27', password: '12345'}),
+     (u23:Usuario {correo: 'lamador@gmail.com', username: 'lamador29', password: '12345'}),
+	(u24:Usuario {correo: 'paola@gmail.com', username: 'paola', password: '12345'});
+
+// Crear relaciones de 'LIKE' y 'DISLIKE' entre usuarios y hobbies
+MATCH (u1:Usuario {username: 'anaperez'}), (h1:Hobby {nombre: 'Leer'})
+CREATE (u1)-[:LIKE]->(h1);
+
+MATCH (u2:Usuario {username: 'carlosm'}), (h2:Hobby {nombre: 'Correr'})
+CREATE (u2)-[:LIKE]->(h2);
+
+MATCH (u3:Usuario {username: 'lauragomez'}), (h3:Hobby {nombre: 'Tocar un instrumento'})
+CREATE (u3)-[:LIKE]->(h3);
+
+MATCH (u4:Usuario {username: 'miguelr'}), (h4:Hobby {nombre: 'Cocinar'})
+CREATE (u4)-[:LIKE]->(h4);
+
+MATCH (u5:Usuario {username: 'sofiaml'}), (h5:Hobby {nombre: 'Viajar'})
+CREATE (u5)-[:LIKE]->(h5);
+
+// Usuarios con hobbies en común (disLIKE incluidos)
+MATCH (u6:Usuario {username: 'davids'}), (h2:Hobby {nombre: 'Correr'})
+CREATE (u6)-[:LIKE]->(h2);
+
+MATCH (u7:Usuario {username: 'paulamorales'}), (h1:Hobby {nombre: 'Leer'})
+CREATE (u7)-[:LIKE]->(h1);
+
+MATCH (u8:Usuario {username: 'fergarcia'}), (h3:Hobby {nombre: 'Tocar un instrumento'})
+CREATE (u8)-[:LIKE]->(h3);
+
+MATCH (u9:Usuario {username: 'julietatorres'}), (h4:Hobby {nombre: 'Cocinar'})
+CREATE (u9)-[:LIKE]->(h4);
+
+// Relaciones de 'DISLIKE' 
+MATCH (u1:Usuario {username: 'anaperez'}), (h6:Hobby {nombre: 'Fotografía'})
+CREATE (u1)-[:DISLIKE]->(h6);
+
+MATCH (u2:Usuario {username: 'carlosm'}), (h7:Hobby {nombre: 'Jardinería'})
+CREATE (u2)-[:DISLIKE]->(h7);
+
+MATCH (u3:Usuario {username: 'lauragomez'}), (h8:Hobby {nombre: 'Pintura'})
+CREATE (u3)-[:DISLIKE]->(h8);
+
+MATCH (u4:Usuario {username: 'miguelr'}), (h9:Hobby {nombre: 'Escritura'})
+CREATE (u4)-[:DISLIKE]->(h9);
+
+MATCH (u5:Usuario {username: 'sofiaml'}), (h10:Hobby {nombre: 'Montar bicicleta'})
+CREATE (u5)-[:DISLIKE]->(h10);
+
+// Crear más relaciones 'LIKE' y 'DISLIKE'
+MATCH (u6:Usuario {username: 'davids'}), (h6:Hobby {nombre: 'Fotografía'})
+CREATE (u6)-[:LIKE]->(h6);
+
+MATCH (u7:Usuario {username: 'paulamorales'}), (h11:Hobby {nombre: 'Escalar'})
+CREATE (u7)-[:LIKE]->(h11);
+
+MATCH (u8:Usuario {username: 'fergarcia'}), (h12:Hobby {nombre: 'Pescar'})
+CREATE (u8)-[:DISLIKE]->(h12);
+
+MATCH (u9:Usuario {username: 'julietatorres'}), (h13:Hobby {nombre: 'Esquí'})
+CREATE (u9)-[:DISLIKE]->(h13);
+
+// Crear más relaciones con hobbies adicionales
+MATCH (u10:Usuario {username: 'ricardov'}), (h1:Hobby {nombre: 'Leer'})
+CREATE (u10)-[:LIKE]->(h1);
+
+MATCH (u11:Usuario {username: 'marianafern'}), (h14:Hobby {nombre: 'Programación'})
+CREATE (u11)-[:LIKE]->(h14);
+
+MATCH (u12:Usuario {username: 'andresrom'}), (h15:Hobby {nombre: 'Meditación'})
+CREATE (u12)-[:LIKE]->(h15);
+
+MATCH (u13:Usuario {username: 'luciacastro'}), (h16:Hobby {nombre: 'Yoga'})
+CREATE (u13)-[:DISLIKE]->(h16);
+
+MATCH (u14:Usuario {username: 'juangarcia'}), (h17:Hobby {nombre: 'Senderismo'})
+CREATE (u14)-[:LIKE]->(h17);
+
+MATCH (u15:Usuario {username: 'emiliaro'}), (h18:Hobby {nombre: 'Surf'})
+CREATE (u15)-[:DISLIKE]->(h18);
+
+// Más usuarios con 'LIKE' y 'DISLIKE'
+MATCH (u16:Usuario {username: 'javiermen'}), (h19:Hobby {nombre: 'Buceo'})
+CREATE (u16)-[:LIKE]->(h19);
+
+MATCH (u17:Usuario {username: 'mariagut'}), (h20:Hobby {nombre: 'Tocar la guitarra'})
+CREATE (u17)-[:LIKE]->(h20);
+
+MATCH (u18:Usuario {username: 'jorgeram'}), (h21:Hobby {nombre: 'Astronomía'})
+CREATE (u18)-[:LIKE]->(h21);
+
+MATCH (u19:Usuario {username: 'valortega'}), (h22:Hobby {nombre: 'Escultura'})
+CREATE (u19)-[:DISLIKE]->(h22);
+
+MATCH (u20:Usuario {username: 'diegoriv'}), (h23:Hobby {nombre: 'Cine'})
+CREATE (u20)-[:LIKE]->(h23);
+
+MATCH (u1:Usuario {username: 'davids'}), (h1:Hobby {nombre: 'Surf'})
+CREATE (u1)-[:LIKE]->(h1);
+
+MATCH (u2:Usuario {username: 'paulamorales'}), (h2:Hobby {nombre: 'Cine'})
+CREATE (u2)-[:LIKE]->(h2);
+
+MATCH (u3:Usuario {username: 'fergarcia'}), (h3:Hobby {nombre: 'Fútbol'})
+CREATE (u3)-[:LIKE]->(h3);
+
+MATCH (u4:Usuario {username: 'julietatorres'}), (h4:Hobby {nombre: 'Natación'})
+CREATE (u4)-[:LIKE]->(h4);
+
+MATCH (u5:Usuario {username: 'ricardov'}), (h5:Hobby {nombre: 'Yoga'})
+CREATE (u5)-[:LIKE]->(h5);
+
+MATCH (u6:Usuario {username: 'anaperez'}), (h6:Hobby {nombre: 'Surf'})
+CREATE (u6)-[:LIKE]->(h6);
+
+MATCH (u7:Usuario {username: 'carlosm'}), (h7:Hobby {nombre: 'Fotografía'})
+CREATE (u7)-[:LIKE]->(h7);
+
+MATCH (u8:Usuario {username: 'lauragomez'}), (h8:Hobby {nombre: 'Escuchar música'})
+CREATE (u8)-[:LIKE]->(h8);
+
+MATCH (u9:Usuario {username: 'miguelr'}), (h9:Hobby {nombre: 'Jugar videojuegos'})
+CREATE (u9)-[:LIKE]->(h9);
+
+MATCH (u10:Usuario {username: 'sofiaml'}), (h10:Hobby {nombre: 'Escribir'})
+CREATE (u10)-[:LIKE]->(h10);
+
+MATCH (u1:Usuario {username: 'anaperez'}), (h1:Hobby {nombre: 'Viajar'})
+CREATE (u1)-[:DISLIKE]->(h1);
+
+MATCH (u2:Usuario {username: 'carlosm'}), (h2:Hobby {nombre: 'Cocinar'})
+CREATE (u2)-[:DISLIKE]->(h2);
+
+MATCH (u3:Usuario {username: 'lauragomez'}), (h3:Hobby {nombre: 'Montar bicicleta'})
+CREATE (u3)-[:DISLIKE]->(h3);
+
+MATCH (u4:Usuario {username: 'miguelr'}), (h4:Hobby {nombre: 'Leer'})
+CREATE (u4)-[:DISLIKE]->(h4);
+
+MATCH (u5:Usuario {username: 'sofiaml'}), (h5:Hobby {nombre: 'Tocar un instrumento'})
+CREATE (u5)-[:DISLIKE]->(h5);
+
+MATCH (u6:Usuario {username: 'davids'}), (h6:Hobby {nombre: 'Pintar'})
+CREATE (u6)-[:DISLIKE]->(h6);
+
+MATCH (u7:Usuario {username: 'paulamorales'}), (h7:Hobby {nombre: 'Jardinería'})
+CREATE (u7)-[:DISLIKE]->(h7);
+
+MATCH (u8:Usuario {username: 'fergarcia'}), (h8:Hobby {nombre: 'Escribir'})
+CREATE (u8)-[:DISLIKE]->(h8);
+
+MATCH (u9:Usuario {username: 'julietatorres'}), (h9:Hobby {nombre: 'Fotografía'})
+CREATE (u9)-[:DISLIKE]->(h9);
+
+MATCH (u10:Usuario {username: 'ricardov'}), (h10:Hobby {nombre: 'Escuchar música'})
+CREATE (u10)-[:DISLIKE]->(h10);
+
+// Crear relaciones para "isaac17"
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Fotografía'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Surf'})
+CREATE (u)-[:DISLIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Leer'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Correr'})
+CREATE (u)-[:DISLIKE]->(h);
+
+// Crear relaciones para "lamador29"
+MATCH (u:Usuario {username: 'lamador29'}), (h:Hobby {nombre: 'Tocar un instrumento'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'lamador29'}), (h:Hobby {nombre: 'Pintura'})
+CREATE (u)-[:DISLIKE]->(h);
+
+MATCH (u:Usuario {username: 'lamador29'}), (h:Hobby {nombre: 'Viajar'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'lamador29'}), (h:Hobby {nombre: 'Montar bicicleta'})
+CREATE (u)-[:LIKE]->(h);
+
+// Crear relaciones para "josue27"
+MATCH (u:Usuario {username: 'josue27'}), (h:Hobby {nombre: 'Fotografía'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'josue27'}), (h:Hobby {nombre: 'Cine'})
+CREATE (u)-[:DISLIKE]->(h);
+
+// Crear relaciones para "paola"
+MATCH (u:Usuario {username: 'paola'}), (h:Hobby {nombre: 'Yoga'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'paola'}), (h:Hobby {nombre: 'Escribir'})
+CREATE (u)-[:DISLIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Pintura'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Escalar'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Natación'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Jardinería'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Tocar un instrumento'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Cine'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Programación'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Fotografía'})
+CREATE (u)-[:LIKE]->(h);
+
+MATCH (u:Usuario {username: 'isaac17'}), (h:Hobby {nombre: 'Cocinar'})
+CREATE (u)-[:LIKE]->(h);

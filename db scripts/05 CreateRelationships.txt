@@ -1,0 +1,5 @@
+MATCH (user:Usuario {username: "jjosue"}), 
+      (hobby1:Hobby {nombre: "Cocinar"}), 
+      (hobby2:Hobby {nombre: "Nadar"})
+MERGE (user)-[:LIKE]->(hobby1)
+MERGE (user)-[:DISLIKE]->(hobby2)

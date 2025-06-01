@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página de registro -->
+    <title>Crear Cuenta</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap para proporcionar estilos predeterminados -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos personalizada para la página de registro -->
+    <link href="register.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Contenedor principal que agrupa la información de registro -->
+<div class="register-container">
+    <div class="register-info">
+        <h2>¡Únete a nosotros!</h2>
+        <p>¿Ya tienes una cuenta?</p>
+        <!-- Botón que redirige a la página de login -->
+        <a href="login.html">Iniciar Sesión</a>
+    </div>
+
+    <!-- Formulario para crear una nueva cuenta de usuario -->
+    <div class="register-form">
+        <h3>Registro</h3>
+        <form id="registerForm"> 
+            <!-- Campo para nombre de usuario -->
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required>
+            </div>
+            <!-- Campo para correo electrónico -->
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+            </div>
+            <!-- Campo para contraseña -->
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+            </div>
+            <!-- Botón para enviar el formulario y crear cuenta-->
+            <button type="submit" class="btn btn-block">Crear Cuenta</button>
+            <!-- Div para mensaje de error o información -->
+            <div id="message"></div>
+        </form>
+    </div>
+</div>
+
+<!-- Enlace al archivo JavaScript que manejará la lógica de interacción con el formulario -->
+<script src="register.js"></script>
+</body>
+</html>

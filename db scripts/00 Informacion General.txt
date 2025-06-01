@@ -1,0 +1,12 @@
+//Datos de la Base de Datos
+
+//Name: BetaDBMS
+//Connect URL: neo4j://localhost:7687
+//v5.20.0 
+
+
+
+//Usuario creado en los scripts 01-03
+
+//Username: BetaDBMS
+//Password: betabeta2 

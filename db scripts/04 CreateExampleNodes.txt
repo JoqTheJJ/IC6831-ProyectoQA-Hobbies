@@ -1,0 +1,5 @@
+CREATE (h1:Hobby {nombre: 'Cocinar'});
+
+CREATE (u1:Usuario {correo: 'josue@correo.com', username: 'jjosue', password: '12345'});
+
+CREATE (h2:Hobby {nombre: 'Nadar'})

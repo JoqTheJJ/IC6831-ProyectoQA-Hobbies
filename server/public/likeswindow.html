@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Mis Likes</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap para proporcionar estilos y componentes predeterminados -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Contenedor principal que contiene el menú lateral y el contenido principal -->
+<div class="hobbies-container">
+    <div class="menu">
+        <h2>Mis Likes</h2>
+        <!-- Botón que redirige a la página principal -->
+        <button onclick="location.href='main.html'">Atrás</button>
+    </div>
+
+    <!-- Sección de contenido principal donde se mostrará la lista de hobbies que le gustan -->
+    <div class="content">
+        <h3>Hobbies que te gustan</h3>
+        <!-- Aquí se cargará la lista de hobbies que le gustan al usuario -->
+        <div class="liked-hobby-list"></div>
+    </div>
+</div>
+
+<!-- Archivo JavaScript que manejará la lógica de interacción de la página -->
+<script src="likeswindow.js"></script>
+
+</body>
+</html>

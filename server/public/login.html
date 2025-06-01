@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Página de Login</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap para proporcionar estilos predeterminados -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos personalizada para la página de login -->
+    <link href="login.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Contenedor principal que engloba la parte visual de la página de login -->
+<div class="login-container">
+    <div class="login-info">
+        <h2>Bienvenido</h2>
+        <p>¿No tienes una cuenta?</p>
+        <!-- Enlace a la página de registro -->
+        <a href="register.html">Regístrate</a>
+    </div>
+
+    <!-- Formulario de inicio de sesión -->
+    <div class="login-form">
+        <h3>Iniciar Sesión</h3>
+        <form id="loginForm">
+            <!-- Campo para nombre de usuario -->
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required>
+            </div>
+            <!-- Campo para contraseña -->
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+            </div>
+            <!-- Botón para enviar el formulario -->
+            <button type="submit" class="btn btn-block">Iniciar Sesión</button>
+            <!-- Div para mensaje de error o información -->
+            <div id="message"></div>
+        </form>
+    </div>
+</div>
+
+<!-- Archivo JavaScript que contiene la lógica para gestionar el inicio de sesión -->
+<script src="login.js"></script>
+</body>
+</html>

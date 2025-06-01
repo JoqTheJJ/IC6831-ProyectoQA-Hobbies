@@ -1,0 +1,2 @@
+MATCH (n1)-[r]->(n2)
+DELETE r

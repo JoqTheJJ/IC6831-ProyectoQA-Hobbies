@@ -1,0 +1,122 @@
+/* Estilo general del cuerpo */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7fae7;
+}
+
+/* Configuración del contenedor principal que organiza el menú */
+.hobbies-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Estilo del menú lateral */
+.menu {
+  background: linear-gradient(67deg, rgba(79,183,131,1) 14.4%, rgba(254,235,151,1) 92.7%);
+  color: white;
+  padding: 40px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Estilo del título del menú */
+.menu h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* Diseño de los botones del menú */
+.menu button {
+  background-color: white;
+  color: rgb(25, 159, 92);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Estilo general del contenido principal, con un diseño en columna y scroll automático */
+.content {
+  background-color: white;
+  padding: 40px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+/* Estilo para los títulos dentro del contenido */
+.content h3 {
+  font-size: 24px;
+}
+
+/* Configuración de las listas de hobbies y recomendaciones */
+.hobby-list, .recommendation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+/* Estilo para cada elemento de las listas */
+.hobby-item, .recommendation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Diseño de la sección de recomendaciones */
+.recommendations {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f2fdf2;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Estilo general para el texto de recomendación */
+.recommendation-text {
+  font-size: 14px; 
+  color: #333; 
+  font-weight: 500; 
+  display: inline-flex; 
+  align-items: center; 
+  background-color: #befcbe; 
+  padding: 5px 10px; 
+  border-radius: 5px;
+}
+
+
+/* Estilo de los botones de like y dislike */
+.like-btn, .dislike-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Colores de los botones de like y dislike */
+.like-btn {
+  color: green;
+}
+
+.dislike-btn {
+  color: red;
+}
