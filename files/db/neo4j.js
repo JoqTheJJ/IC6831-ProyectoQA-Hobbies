@@ -1,7 +1,7 @@
 const neo4j = require('neo4j-driver');
 
 const config = {
-  uri: 'bolt://localhost:7687',
+  uri: 'neo4j+s://add8cd0f.databases.neo4j.io',
   user: 'BetaDBMS',
   password: 'betabeta2'
 };
