@@ -12,7 +12,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('public'));
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
