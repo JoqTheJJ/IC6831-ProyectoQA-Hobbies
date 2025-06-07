@@ -57,7 +57,7 @@ exports.loginUser = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error durante el inicio de sesión:', error);
+    //console.error('Error durante el inicio de sesión:', error);
     res.status(500).send('Error durante el inicio de sesión');
   }
 };

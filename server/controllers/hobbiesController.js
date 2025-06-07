@@ -32,7 +32,7 @@ exports.getHobbies = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error al obtener hobbies:', error);
+    //console.error('Error al obtener hobbies:', error);
     res.status(500).json({ message: 'Error al obtener hobbies' });
   }
 };
@@ -79,7 +79,7 @@ exports.getRecommendations = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error al obtener recomendaciones:', error);
+    //console.error('Error al obtener recomendaciones:', error);
     res.status(500).json({ message: 'Error al obtener recomendaciones' });
   }
 };
@@ -112,7 +112,7 @@ exports.getLikesByUser = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error al obtener hobbies del usuario:', error);
+    //console.error('Error al obtener hobbies del usuario:', error);
     res.status(500).json({ message: 'Error al obtener hobbies del usuario' });
   }
 };
@@ -146,7 +146,7 @@ exports.getDislikesByUser = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error al obtener dislikes del usuario:', error);
+    //console.error('Error al obtener dislikes del usuario:', error);
     res.status(500).json({ message: 'Error al obtener dislikes del usuario' });
   }
 };

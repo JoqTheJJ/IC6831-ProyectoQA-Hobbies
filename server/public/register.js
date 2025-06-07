@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       } catch (error) {
           // Manejar errores de conexión
-          console.error('Error durante el registro:', error);
+          //console.error('Error durante el registro:', error);
           messageDiv.innerHTML = `<p style="color: red;">Ocurrió un error al conectarse con el servidor.</p>`;
       }
     });

@@ -30,7 +30,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
   } catch (error) {
     // Manejar errores de conexión o problemas en la solicitud
-    console.error('Error durante el inicio de sesión:', error);
+    //console.error('Error durante el inicio de sesión:', error);
     messageDiv.innerHTML = `<p style="color: red;">Error: ${result}</p>`;
   }
 });

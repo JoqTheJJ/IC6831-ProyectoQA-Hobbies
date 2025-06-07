@@ -38,7 +38,7 @@ exports.like = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error al registrar like:', error);
+    //console.error('Error al registrar like:', error);
     res.status(500).send('Error al registrar like.');
   } finally {
     //Close db session
@@ -81,7 +81,7 @@ exports.dislike = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error al registrar dislike:', error);
+    //console.error('Error al registrar dislike:', error);
     res.status(500).send('Error al registrar dislike.');
   } finally {
     //Close db session
@@ -125,7 +125,7 @@ exports.deleteLike = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error al eliminar like:', error);
+    //console.error('Error al eliminar like:', error);
     res.status(500).send('Error al eliminar like.');
   } finally {
     //Close db session
@@ -169,7 +169,7 @@ exports.deleteDislike = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error al eliminar dislike:', error);
+    //console.error('Error al eliminar dislike:', error);
     res.status(500).send('Error al eliminar dislike.');
   } finally {
     //Close db session

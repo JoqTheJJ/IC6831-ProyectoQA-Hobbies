@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
       }
     } catch (error) {
-      console.error('Error al cargar hobbies:', error);
+      //console.error('Error al cargar hobbies:', error);
     }
   }
 
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
       }
     } catch (error) {
-      console.error('Error al cargar recomendaciones:', error);
+      //console.error('Error al cargar recomendaciones:', error);
     }
   }
 
@@ -117,10 +117,10 @@ document.addEventListener('DOMContentLoaded', async function() {
       if (response.ok) {
         //console.log(`Like registrado para: ${hobbyName}`);
       } else {
-        console.error('Error durante el registro de like');
+        //console.error('Error durante el registro de like');
       }
     } catch (error) {
-      console.error('Error al registrar like:', error);
+      //console.error('Error al registrar like:', error);
     }
 
     // Recargar los hobbies y recomendaciones después del like
@@ -141,10 +141,10 @@ document.addEventListener('DOMContentLoaded', async function() {
       if (response.ok) {
         //console.log(`Dislike registrado para: ${hobbyName}`);
       } else {
-        console.error('Error durante el registro de dislike');
+        //console.error('Error durante el registro de dislike');
       }
     } catch (error) {
-      console.error('Error al registrar dislike:', error);
+      //console.error('Error al registrar dislike:', error);
     }
 
     // Recargar los hobbies y recomendaciones después del dislike

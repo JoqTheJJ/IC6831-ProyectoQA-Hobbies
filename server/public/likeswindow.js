@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
       }
     } catch (error) {
-      console.error('Error al cargar los hobbies con like:', error);
+      //console.error('Error al cargar los hobbies con like:', error);
     }
   }
 
@@ -69,10 +69,10 @@ document.addEventListener('DOMContentLoaded', async function() {
       if (response.ok) {
         //console.log(`Like eliminado para: ${hobbyName}`);
       } else {
-        console.error('Error durante la eliminación del like');
+        //console.error('Error durante la eliminación del like');
       }
     } catch (error) {
-      console.error('Error al eliminar like:', error);
+      //console.error('Error al eliminar like:', error);
     }
 
     // Recargar la lista de hobbies con likes después de eliminar uno

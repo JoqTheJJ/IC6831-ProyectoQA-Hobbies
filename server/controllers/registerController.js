@@ -50,7 +50,7 @@ exports.registerUser = async (req, res) => {
 
   } catch (error) {
     //Error
-    console.error('Error durante el registro:', error);
+    //console.error('Error durante el registro:', error);
     res.status(500).send('Error al registrar el usuario');
   }
 };

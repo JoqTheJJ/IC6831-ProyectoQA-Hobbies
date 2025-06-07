@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async function() {
           });
         }
       } catch (error) {
-        console.error('Error al cargar los hobbies con dislike:', error);
+        //console.error('Error al cargar los hobbies con dislike:', error);
       }
   }
   
@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', async function() {
         if (response.ok) {
           //console.log(`Dislike eliminado para: ${hobbyName}`);
         } else {
-          console.error('Error al eliminar el dislike');
+          //console.error('Error al eliminar el dislike');
         }
       } catch (error) {
-        console.error('Error al eliminar dislike:', error);
+        //console.error('Error al eliminar dislike:', error);
       }
 
       // Recargar la lista de hobbies con dislikes después de eliminar
