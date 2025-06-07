@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async function() {
       });
 
       if (response.ok) {
-        console.log(`Like eliminado para: ${hobbyName}`);
+        //console.log(`Like eliminado para: ${hobbyName}`);
       } else {
         console.error('Error durante la eliminación del like');
       }

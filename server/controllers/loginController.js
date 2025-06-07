@@ -12,7 +12,7 @@ exports.loginUser = async (req, res) => {
   Verifica que el usuario y la contraseña coincidan
   con los almacenados en la base de datos
   */
-  console.log('Datos recibidos:', req.body);
+  //console.log('Datos recibidos:', req.body);
   const { username, password } = req.body;
 
   if (!username || !password) {
@@ -38,19 +38,19 @@ exports.loginUser = async (req, res) => {
 
       if (storedPassword === password) {
         //Inicio de sesión exitoso
-        console.log('Inicio de sesión exitoso');
+        //console.log('Inicio de sesión exitoso');
         res.send('Inicio de sesión exitoso');
 
       } else {
         //Contraseña incorrecta
-        console.log('Contraseña incorrecta');
+        //console.log('Contraseña incorrecta');
         return res.status(401).send('Contraseña incorrecta');
       }
 
 
     } else {
       //Usuario no encontrado
-      console.log('Usuario no encontrado');
+      //console.log('Usuario no encontrado');
       res.status(404).send('Usuario no encontrado');
     }
 

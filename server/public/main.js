@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         body: JSON.stringify({ username, hobby: hobbyName })
       });
       if (response.ok) {
-        console.log(`Like registrado para: ${hobbyName}`);
+        //console.log(`Like registrado para: ${hobbyName}`);
       } else {
         console.error('Error durante el registro de like');
       }
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         body: JSON.stringify({ username, hobby: hobbyName })
       });
       if (response.ok) {
-        console.log(`Dislike registrado para: ${hobbyName}`);
+        //console.log(`Dislike registrado para: ${hobbyName}`);
       } else {
         console.error('Error durante el registro de dislike');
       }

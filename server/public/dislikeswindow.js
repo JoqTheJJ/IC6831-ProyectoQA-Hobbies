@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async function() {
           body: JSON.stringify({ username, hobby: hobbyName }) // Enviar los datos para eliminar el dislike
         });
         if (response.ok) {
-          console.log(`Dislike eliminado para: ${hobbyName}`);
+          //console.log(`Dislike eliminado para: ${hobbyName}`);
         } else {
           console.error('Error al eliminar el dislike');
         }

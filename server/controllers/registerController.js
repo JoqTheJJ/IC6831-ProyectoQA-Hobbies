@@ -11,7 +11,7 @@ exports.registerUser = async (req, res) => {
   Recibe el usuario, correo y contraseña
   Registra al usuario en la base de datos
   */
-  console.log('Datos recibidos:', req.body);
+  //console.log('Datos recibidos:', req.body);
   const { username, email, password } = req.body;
 
   if (!username || !email || !password) {
@@ -30,7 +30,7 @@ exports.registerUser = async (req, res) => {
     if (existingUser.records.length > 0) {
       //El usuario ya existe
       await session.close();
-      console.log('El nombre de usuario ya existe');
+      //console.log('El nombre de usuario ya existe');
       return res.status(409).json({ message: 'El nombre de usuario ya está registrado' });
     }
 

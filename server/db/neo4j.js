@@ -14,9 +14,9 @@ const neo4jClient = neo4j.driver(config.uri, neo4j.auth.basic(config.user, confi
 async function checkConnection(){
   try {
     await neo4jClient.verifyConnectivity();
-    console.log('Conectado a Neo4j exitosamente');
+    //console.log('Conectado a Neo4j exitosamente');
   } catch (error) {
-    console.error('Error al conectar a Neo4j:', error);
+    //console.error('Error al conectar a Neo4j:', error);
     process.exit(1);
   }
 }

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const messageDiv = document.getElementById('message');
       event.preventDefault();  // Prevenir el envío predeterminado del formulario
   
-      console.log('Formulario enviado');
+      //console.log('Formulario enviado');
       
       // Obtener los valores ingresados por el usuario
       const username = document.getElementById('username').value;
