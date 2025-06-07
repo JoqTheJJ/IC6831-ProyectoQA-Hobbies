@@ -1,0 +1,122 @@
+>>> npx jest --verbose
+
+
+
+ PASS  server/tests/controllers/relationshipNeo.test.js
+  Relationship Controller
+    √ {                                                                                                                                                                                                                    
+  route: '/relationshipNeo/like',                                                                                                                                                                                          
+  method: 'like',
+  successMsg: 'Like registrado exitosamente.',
+  delete: false
+} - éxito (36 ms)
+    √ {
+  route: '/relationshipNeo/dislike',                                                                                                                                                                                       
+  method: 'dislike',
+  successMsg: 'Dislike registrado exitosamente.',
+  delete: false
+} - éxito (4 ms)
+    √ {
+  route: '/relationshipNeo/deleteLike',                                                                                                                                                                                    
+  method: 'deleteLike',
+  successMsg: 'Like eliminado exitosamente.',
+  delete: true
+} - éxito (4 ms)
+    √ {
+  route: '/relationshipNeo/deleteDislike',                                                                                                                                                                                 
+  method: 'deleteDislike',
+  successMsg: 'Dislike eliminado exitosamente.',
+  delete: true
+} - éxito (3 ms)
+    √ {
+  route: '/relationshipNeo/like',                                                                                                                                                                                          
+  method: 'like',
+  successMsg: 'Like registrado exitosamente.',
+  delete: false
+} - usuario o hobby no encontrado (3 ms)
+    √ {
+  route: '/relationshipNeo/dislike',                                                                                                                                                                                       
+  method: 'dislike',
+  successMsg: 'Dislike registrado exitosamente.',
+  delete: false
+} - usuario o hobby no encontrado (3 ms)
+    √ {
+  route: '/relationshipNeo/deleteLike',                                                                                                                                                                                    
+  method: 'deleteLike',
+  successMsg: 'Like eliminado exitosamente.',
+  delete: true
+} - usuario o hobby no encontrado (3 ms)
+    √ {
+  route: '/relationshipNeo/deleteDislike',                                                                                                                                                                                 
+  method: 'deleteDislike',
+  successMsg: 'Dislike eliminado exitosamente.',
+  delete: true
+} - usuario o hobby no encontrado (3 ms)
+    √ {
+  route: '/relationshipNeo/like',                                                                                                                                                                                          
+  method: 'like',
+  successMsg: 'Like registrado exitosamente.',
+  delete: false
+} - error interno del servidor (4 ms)
+    √ {
+  route: '/relationshipNeo/dislike',                                                                                                                                                                                       
+  method: 'dislike',
+  successMsg: 'Dislike registrado exitosamente.',
+  delete: false
+} - error interno del servidor (3 ms)
+    √ {
+  route: '/relationshipNeo/deleteLike',                                                                                                                                                                                    
+  method: 'deleteLike',
+  successMsg: 'Like eliminado exitosamente.',
+  delete: true
+} - error interno del servidor (3 ms)
+    √ {
+  route: '/relationshipNeo/deleteDislike',                                                                                                                                                                                 
+  method: 'deleteDislike',
+  successMsg: 'Dislike eliminado exitosamente.',
+  delete: true
+} - error interno del servidor (3 ms)
+
+ PASS  server/tests/controllers/hobbiesController.test.js                                                                                                                                                                  
+  Controlador de hobbies
+    POST /hobbies/getHobbies                                                                                                                                                                                               
+      √ debe retornar 200 con una lista de hobbies (10 ms)                                                                                                                                                                 
+      √ debe manejar errores internos (3 ms)                                                                                                                                                                               
+    POST /hobbies/getRecommendations                                                                                                                                                                                       
+      √ debe retornar recomendaciones con puntaje (3 ms)                                                                                                                                                                   
+      √ debe manejar errores internos en recomendaciones (2 ms)                                                                                                                                                            
+    POST /hobbies/getLikesByUser                                                                                                                                                                                           
+      √ debe retornar hobbies con like del usuario (3 ms)                                                                                                                                                                  
+      √ debe manejar error al obtener likes (3 ms)                                                                                                                                                                         
+    POST /hobbies/getDislikesByUser
+      √ debe retornar hobbies con dislike del usuario (3 ms)                                                                                                                                                               
+      √ debe manejar error al obtener dislikes (3 ms)                                                                                                                                                                      
+                                                                                                                                                                                                                           
+ PASS  server/tests/controllers/registerController.test.js                                                                                                                                                                 
+  POST /register
+    √ debe manejar el caso: { username: 'testuser', email: 'test@example.com', password: '1234' } (6 ms)                                                                                                                   
+    √ debe manejar el caso: { username: '', email: 'test@example.com', password: '1234' } (3 ms)                                                                                                                           
+    √ debe manejar el caso: { username: 'user2', email: '', password: '1234' } (3 ms)                                                                                                                                      
+    √ debe manejar el caso: { username: 'user3', email: 'mail@example.com', password: '' } (2 ms)                                                                                                                          
+    √ debe manejar el caso: { username: '', email: '', password: '' } (2 ms)                                                                                                                                               
+    √ debe retornar 409 si el usuario ya existe (2 ms)                                                                                                                                                                     
+                                                                                                                                                                                                                           
+ PASS  server/tests/controllers/loginController.test.js                                                                                                                                                                    
+  POST /login
+    √ debe validar campos requeridos: { username: '', password: '1234' } (5 ms)                                                                                                                                            
+    √ debe validar campos requeridos: { username: 'testuser', password: '' } (2 ms)                                                                                                                                        
+    √ debe validar campos requeridos: { username: '', password: '' } (2 ms)                                                                                                                                                
+    √ debe retornar 404 si el usuario no existe (3 ms)                                                                                                                                                                     
+    √ debe retornar 401 si la contraseña es incorrecta (2 ms)                                                                                                                                                              
+    √ debe retornar 200 si el inicio de sesión es exitoso (2 ms)                                                                                                                                                           
+    √ debe retornar 500 si ocurre un error en la base de datos (4 ms)                                                                                                                                                      
+                                                                                                                                                                                                                           
+ PASS  server/tests/public/main.test.js                                                                                                                                                                                    
+  main.js
+    √ carga la página sin errores (19 ms)                                                                                                                                                                                  
+                                                                                                                                                                                                                           
+Test Suites: 5 passed, 5 total                                                                                                                                                                                             
+Tests:       34 passed, 34 total                                                                                                                                                                                           
+Snapshots:   0 total
+Time:        1.309 s
+Ran all test suites.
